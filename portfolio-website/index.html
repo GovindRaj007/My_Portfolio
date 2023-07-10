@@ -65,23 +65,35 @@
       .leftSection {
         font-size: 3rem;
         margin-bottom: 50px;
+        margin-top: 25px;
+        margin-left: 20px;
+      }
+
+      .leftSection .buttons {
+        padding: 50px 0;
+      }
+      .leftSection .btn {
+        padding: 12px;
+        font-size: 20px;
+        cursor: pointer;
       }
       .rightSection img {
         width: 100%;
         margin-top: -5.5rem;
         margin-left: -2rem;
+        object-fit: cover;
       }
       .purple {
         color: rgb(96, 171, 212);
       }
-      
+
       #element {
         color: rgb(96, 171, 212);
       }
       .secondSection {
         max-width: 80vw;
         margin: auto;
-        height: 80vh;
+        height: 65vh;
       }
       .secondSection h1 {
         font-size: 1.9rem;
@@ -94,18 +106,30 @@
         margin-bottom: 100px;
         display: flex;
       }
-      .secondSection .vertical {
+      .secondSection .vertical-1,
+      .vertical-2,
+      .vertical-3,
+      .vertical-4 {
         height: 93px;
         width: 1px;
         background-color: white;
         margin-right: 140px;
         /* padding-bottom: 25px; */
       }
+      .secondSection .vertical-2,
+      .vertical-3,
+      .vertical-4 {
+        margin-left: 180px;
+      }
+      .second-break{
+        margin-top: 130px;
+      }
       .image-top {
-        width: 50px;
+        width: 70px;
         position: relative;
-        top: -65px;
-        height: 60px;
+        top: -72px;
+        height: 70px;
+        border-radius: 10px;
       }
       .vertical-title {
         position: relative;
@@ -137,9 +161,10 @@
         text-align: center;
         font-family: "Merriweather", serif;
         margin-bottom: 45px;
+        
       }
       .btn {
-        background: rgb(56, 140, 186);
+        background: rgb(1, 52, 80);
         border-radius: 13px;
         text-shadow: 0px 0px 0px #666666;
         -webkit-box-shadow: 4px 7px 4px #171217;
@@ -157,7 +182,7 @@
         background-image: -ms-linear-gradient(top, #384147, #3498db);
         background-image: -o-linear-gradient(top, #384147, #3498db);
         background-image: linear-gradient(to bottom, #384147, #3498db);
-        font-size: 1.5rem;
+
         text-decoration: none;
       }
       .footer {
@@ -171,14 +196,11 @@
         margin: 10px 0;
         font-size: 14px;
         font-weight: 400;
-        
       }
       .footer-second {
         margin: 10px 0;
         font-size: 14px;
         font-weight: 400;
-        
-        
       }
       .footer-third {
         margin: 10px 0;
@@ -199,14 +221,84 @@
         font-weight: 700;
         text-transform: uppercase;
       }
-      .footer .footer-rights{
+      .footer .footer-rights {
         text-align: center;
         color: rgb(10, 44, 63);
-        
       }
-      .footer-rights{
+      .footer-rights {
         text-align: center;
-        padding: 12px 0;
+        padding: 10px 0;
+      }
+      @media screen and (max-width: 1500px) {
+        body {
+        }
+        .leftSection .buttons {
+        padding: -3px 0;
+      }
+        .secondSection .vertical-1,
+        .vertical-2,
+        .vertical-3,
+        .vertical-4 {
+          height: unset;
+          /* margin-bottom: 10vh; */
+          margin-top: 22vh;
+        }
+
+        .secondSection .vertical-2,
+        .vertical-3,
+        .vertical-4 {
+          margin-left: 0;
+        }
+        .vertical-title,
+        .vertical-desc {
+          left: 45px;
+          margin-top: -109px;
+          margin-bottom: 117px;
+        }
+        .secondSection .box {
+          flex-direction: column;
+          width: 50vw;
+          align-items: center;
+          margin-top: 36px;
+        }
+        .image-top{
+          margin-left: 45px;
+        }
+        .second-break{
+          margin-top: 346vh;
+        }
+        nav{
+          flex-direction: column;
+        }
+       
+        .firstSection {
+          flex-direction: column-reverse;
+        }
+        .leftSection{
+          width: 100% !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        .rightSection{
+          width: 500px !important;
+          display: flex;
+          justify-content: center;
+        }
+        .rightSection img{
+          width: 100vw;
+          
+        }
+        .secondSection{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        body{
+          min-width: fit-content;
+        }
       }
     </style>
   </head>
@@ -231,6 +323,10 @@
           Hi,My name is <span class="purple">Govind</span>
           <div>and I am a passionate</div>
           <span id="element"></span>
+          <div class="buttons">
+            <button class="btn">Download Resume</button>
+            <button class="btn">Visit Github</button>
+          </div>
         </div>
         <div class="rightSection">
           <img src="images/img1.png" width="600px" height="500px" alt="" />
